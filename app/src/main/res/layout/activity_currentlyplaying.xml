@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.cse110.team28.flashbackmusicplayer.CurrentlyPlayingActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:id = "@+id/info_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:theme="@style/AppBarOverlay">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:gravity="left"
+            android:paddingLeft="3dp">
+            <ImageView
+                android:id="@+id/btn_back"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_height="45dp"
+                android:layout_width="45dp"
+                android:src = "@drawable/arrow_icon"
+                />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/info_title"
+                    android:textSize="19dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Something Interesting"
+                    android:textColor="#202020"/>
+                <TextView
+                    android:id="@+id/info_meta"
+                    android:textSize="14dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text = "1234"
+                    android:textColor="#202020"/>
+            </LinearLayout>
+        </LinearLayout>
+    </android.support.design.widget.AppBarLayout>
+
+    <include layout="@layout/content_currentlyplaying" />
+
+
+</android.support.design.widget.CoordinatorLayout>

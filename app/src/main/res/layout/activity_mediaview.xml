@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relative"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.cse110.team28.flashbackmusicplayer.MediaViewActivity">
+
+    <include
+        android:id="@+id/app_bar"
+        layout="@layout/app_bar" />
+
+    <ViewSwitcher
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/viewSwitcher"
+        android:layout_below="@+id/app_bar">
+
+        <RelativeLayout
+            android:id="@+id/trackLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ScrollView
+                android:id="@+id/scroll_songtable"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true">
+
+                <TableLayout
+                    android:id="@+id/tbl_songview"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#101520"
+                    android:stretchColumns="0">
+                </TableLayout>
+
+            </ScrollView>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/albumLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true">
+
+                <LinearLayout
+                    android:id = "@+id/tbl_albumview"
+                    android:background="#101520"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp">
+                </LinearLayout>
+
+            </ScrollView>
+
+        </RelativeLayout>
+
+    </ViewSwitcher>
+
+    <LinearLayout
+        android:id = "@+id/info_window"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:visibility="gone"
+        android:background="@drawable/background_info"
+        android:onClick="toInvisible">
+
+        <LinearLayout
+            android:layout_width="230dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background_content"
+            android:orientation="vertical"
+            android:paddingLeft="15dp"
+            android:paddingRight="5dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="35dp">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginBottom="5dp"
+                android:id="@+id/close_button"
+                android:src="@drawable/red_close_icon"
+                android:layout_gravity="right" />
+
+            <ImageView
+                android:id = "@+id/cover_art"
+                android:layout_marginLeft="25dp"
+                android:layout_width="150dp"
+                android:layout_height="150dp" />
+
+            <TextView
+                android:id = "@+id/title"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop = "3dp"
+                android:layout_marginBottom="3dp"
+                android:textColor="#F0F0F0" />
+
+            <TextView
+                android:id = "@+id/album"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop = "3dp"
+                android:layout_marginBottom="3dp"
+                android:textColor="#F0F0F0" />
+
+            <TextView
+                android:id = "@+id/artist"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop = "3dp"
+                android:layout_marginBottom="3dp"
+                android:textColor="#F0F0F0"/>
+
+            <TextView
+                android:id = "@+id/comment"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="3dp"
+                android:textColor="#F0F0F0"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:id="@+id/wrapper"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <fragment
+                    android:layout_marginLeft="25dp"
+                    android:id="@+id/frag"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:name="com.google.android.gms.maps.MapFragment"/>
+
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/setting_dialog"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:onClick="hideSettingDialog">
+
+        <LinearLayout
+            android:background="#C0C0C0"
+            android:layout_width="250dp"
+            android:layout_height="165dp"
+            android:orientation="vertical"
+            android:gravity="center">
+            <EditText
+                android:id="@+id/url"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:inputType="text"/>
+
+            <Button
+                android:id="@+id/download_button"
+                android:layout_width="150dp"
+                android:layout_height="30dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/background_set_button"
+                android:text="Download" />
+            <Button
+                android:id="@+id/bttn_mockTime"
+                android:layout_margin="5dp"
+                android:layout_height="30dp"
+                android:layout_width="150dp"
+                android:text="Set Time"
+                android:background="@drawable/background_set_button"
+                />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_currentSong"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_weight="1"
+        android:text="Currently Playing" />
+
+
+
+</RelativeLayout>

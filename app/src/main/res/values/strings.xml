@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Vibe Music Player</string>
+    <string name="settings_flashback">Vibe Mode</string>
+    <string name="settings_songview">Song View</string>
+    <string name="settings_albumview">Album View</string>
+    <string name="settings_artistview">Artist View</string>
+    <string name="settings_favoriteview">Favorite View</string>
+    <string name="title_activity_song_info">SongInfoActivity</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="title_activity_sign_in">SignInActivity</string>
+    <string name="clientID">168407308854-bfavracdbtm619relrq6l8opibb9bge2.apps.googleusercontent.com
+</string>
+    <string name="clientSecret">sNPA8wrM5GwyxPWhmfcfjikZ</string>
+</resources>

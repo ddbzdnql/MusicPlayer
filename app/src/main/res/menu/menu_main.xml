@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/app_bar_switch"
+        android:checked="true"
+        android:title="@string/settings_flashback"
+        app:actionLayout="@layout/switch_item"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/app_bar_setting"
+        android:title="setting"
+        app:actionLayout="@layout/setting_item"
+        app:showAsAction="always" />
+
+    <group>
+        <item
+            android:id="@+id/songView"
+            android:title="@string/settings_songview"
+            android:visible="true"
+            app:showAsAction="never" />
+        <item
+            android:id="@+id/albumView"
+            android:title="@string/settings_albumview"
+            android:visible="true"
+            app:showAsAction="never" />
+        <item
+            android:id="@+id/artistView"
+            android:title="@string/settings_artistview"
+            android:visible="true"
+            app:showAsAction="never" />
+        <item
+            android:id="@+id/favoriteView"
+            android:title="@string/settings_favoriteview"
+            android:visible="true"
+            app:showAsAction="never" />
+    </group>
+
+</menu>

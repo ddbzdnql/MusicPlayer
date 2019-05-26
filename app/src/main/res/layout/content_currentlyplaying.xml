@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.cse110.team28.flashbackmusicplayer.CurrentlyPlayingActivity"
+    tools:showIn="@layout/activity_currentlyplaying">
+        <LinearLayout
+            android:id="@+id/ll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="bottom"
+            android:paddingBottom="45dp"
+            android:background="#E5E5E5">
+
+            <ImageView
+                android:layout_marginBottom="10dp"
+                android:id="@+id/songPicture"
+                android:layout_width="275dp"
+                android:layout_height="275dp"
+                android:src="@drawable/checkbox"
+                app:srcCompat="@drawable/ic_audiotrack_light"
+                tools:layout_editor_absoluteX="8dp"
+                tools:layout_editor_absoluteY="74dp"
+                android:layout_gravity="center"
+                />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_marginBottom="30dp"
+                >
+                <ImageView
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/volume_icon"/>
+                <RelativeLayout
+                    android:layout_width="225dp"
+                    android:layout_height="wrap_content">
+                    <ProgressBar
+                        android:layout_marginTop="4dp"
+                        android:layout_marginLeft="7dp"
+                        android:id="@+id/volume_bar"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        />
+                    <ImageView
+                        android:id="@+id/drag"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:src="@drawable/drag_icon"
+                        />
+                </RelativeLayout>
+            </LinearLayout>
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:layout_marginTop="15dp"
+                    android:layout_marginLeft="25dp"
+                    android:id="@+id/checkmark"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src = "@drawable/checkmark"
+                    android:visibility="gone"
+                    tools:layout_editor_absoluteX="16dp"
+                    tools:layout_editor_absoluteY="359dp" />
+                <ImageView
+                    android:layout_marginTop="15dp"
+                    android:layout_marginLeft="25dp"
+                    android:id="@+id/plus"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src = "@drawable/plus"
+                    android:visibility="gone"
+                    tools:layout_editor_absoluteX="16dp"
+                    tools:layout_editor_absoluteY="359dp" />
+                <ImageView
+                    android:layout_marginTop="15dp"
+                    android:layout_marginLeft="25dp"
+                    android:id="@+id/cross"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src = "@drawable/cross"
+                    android:visibility="gone"
+                    tools:layout_editor_absoluteX="16dp"
+                    tools:layout_editor_absoluteY="359dp" />
+
+            </RelativeLayout>
+
+            <SeekBar
+                android:id="@+id/progressBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+                <ImageView
+                    android:layout_marginRight="15dp"
+                    android:layout_marginLeft="15dp"
+                    android:id="@+id/prev"
+                    android:layout_height="50dp"
+                    android:layout_width="50dp"
+                    android:src="@drawable/prev_icon"
+                    android:alpha="10"
+                    />
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:layout_marginRight="15dp"
+                        android:layout_marginLeft="15dp"
+                        android:id="@+id/play"
+                        android:layout_height="60dp"
+                        android:layout_width="60dp"
+                        android:src="@drawable/play_icon"
+                        android:visibility="gone"
+                        android:alpha="10"
+                        />
+                    <ImageView
+                        android:layout_marginRight="15dp"
+                        android:layout_marginLeft="15dp"
+                        android:id="@+id/pause"
+                        android:layout_height="60dp"
+                        android:layout_width="60dp"
+                        android:src="@drawable/pause_icon"
+                        android:alpha="10"
+                        />
+                </RelativeLayout>
+                <ImageView
+                    android:layout_marginRight="15dp"
+                    android:layout_marginLeft="15dp"
+                    android:id="@+id/next"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/next_icon"
+                    android:alpha="10"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+
+
+</android.support.constraint.ConstraintLayout>
